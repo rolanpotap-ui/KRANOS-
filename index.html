@@ -3,41 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KRANOS- SYSTEM</title>
+    <title>KRANOS_SYSTEM</title>
     <style>
-        body { margin: 0; background: #000; overflow: hidden; font-family: monospace; color: #fff; }
-        .main { display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100vh; }
+        body { margin: 0; background: #000; overflow: hidden; font-family: 'Courier New', monospace; display: flex; justify-content: center; align-items: center; height: 100vh; flex-direction: column; }
         
-        /* Бинарный логотип К из 1 и 0 */
-        .binary-logo {
-            font-size: 10px; 
-            line-height: 8px; 
-            text-align: center; 
-            white-space: pre;
-            text-shadow: 2px 0 #f00, -2px 0 #0ff; 
-            animation: glitch 0.1s infinite;
-            user-select: none;
+        /* Огромная буква К с глитчем */
+        .big-k {
+            font-size: 250px;
+            font-weight: 900;
+            color: #fff;
+            position: relative;
+            line-height: 1;
+            text-shadow: 5px 0 #f00, -5px 0 #0ff;
+            animation: k-glitch 0.2s infinite;
         }
 
-        /* Надпись KRANOS огромным шрифтом */
-        .title {
-            font-size: 5rem; 
-            font-weight: bold; 
+        /* Бинарный код поверх буквы */
+        .big-k::after {
+            content: "10101100101";
+            position: absolute;
+            top: 0; left: 0;
+            font-size: 20px;
+            width: 100%;
+            color: #000;
+            overflow: hidden;
+            opacity: 0.5;
+        }
+
+        /* Надпись KRANOS в стиле fsociety */
+        .kranos-label {
+            font-size: 4rem;
+            font-weight: bold;
+            color: #fff;
             text-transform: uppercase;
-            letter-spacing: -5px; 
-            margin-top: 20px; 
+            letter-spacing: -5px;
+            margin-top: -20px;
             text-shadow: 4px 4px #f00;
+            animation: k-glitch 0.3s infinite reverse;
         }
 
-        @keyframes glitch {
+        @keyframes k-glitch {
             0% { transform: translate(0); }
-            50% { transform: translate(-2px, 1px); }
-            100% { transform: translate(2px, -1px); }
+            20% { transform: translate(-4px, 2px) skew(5deg); }
+            40% { transform: translate(4px, -2px) skew(-5deg); }
+            100% { transform: translate(0); }
         }
     </style>
 </head>
 <body>
-    <div class="main">
-        <div class="binary-logo">
-1010101010101010101010101010
-1
+    <div class="big-k">K</div>
+    <div class="kranos-label">KRANOS</div>
+</body>
+</html>
