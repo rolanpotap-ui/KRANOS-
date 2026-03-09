@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KRANOS</title>
+    <style>
+        body { margin: 0; background: #000; overflow: hidden; font-family: monospace; }
+        .container { display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100vh; }
+        
+        /* Та самая К из символов */
+        .k-logo {
+            color: #fff;
+            font-size: 1.5rem;
+            line-height: 1;
+            text-align: center;
+            white-space: pre;
+            text-shadow: 2px 0 #f00, -2px 0 #0ff;
+            animation: glitch 0.2s infinite;
+        }
+
+        /* Надпись KRANOS вместо fsociety */
+        .kranos-text {
+            color: #fff;
+            font-size: 5rem;
+            font-weight: bold;
+            letter-spacing: -5px;
+            margin-top: 20px;
+            text-shadow: 3px 3px #f00;
+            text-transform: uppercase;
+        }
+
+        @keyframes glitch {
+            0% { transform: translate(0); }
+            50% { transform: translate(-2px, 2px); }
+            100% { transform: translate(2px, -2px); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="k-logo">
+██   ██
+██  ██ 
+█████  
+██  ██ 
+██   ██
+        </div>
+        <div class="kranos-text">KRANOS</div>
+    </div>
+</body>
+</html>
