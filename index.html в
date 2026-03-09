@@ -1,52 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KRANOS</title>
+    <title>KRANOS- SYSTEM</title>
     <style>
-        body { margin: 0; background: #000; overflow: hidden; font-family: monospace; }
-        .container { display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100vh; }
+        body { margin: 0; background: #000; overflow: hidden; font-family: monospace; color: #fff; }
+        .main { display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100vh; }
         
-        /* Та самая К из символов */
-        .k-logo {
-            color: #fff;
-            font-size: 1.5rem;
-            line-height: 1;
-            text-align: center;
+        /* Бинарный логотип К из 1 и 0 */
+        .binary-logo {
+            font-size: 10px; 
+            line-height: 8px; 
+            text-align: center; 
             white-space: pre;
-            text-shadow: 2px 0 #f00, -2px 0 #0ff;
-            animation: glitch 0.2s infinite;
+            text-shadow: 2px 0 #f00, -2px 0 #0ff; 
+            animation: glitch 0.1s infinite;
+            user-select: none;
         }
 
-        /* Надпись KRANOS вместо fsociety */
-        .kranos-text {
-            color: #fff;
-            font-size: 5rem;
-            font-weight: bold;
-            letter-spacing: -5px;
-            margin-top: 20px;
-            text-shadow: 3px 3px #f00;
+        /* Надпись KRANOS огромным шрифтом */
+        .title {
+            font-size: 5rem; 
+            font-weight: bold; 
             text-transform: uppercase;
+            letter-spacing: -5px; 
+            margin-top: 20px; 
+            text-shadow: 4px 4px #f00;
         }
 
         @keyframes glitch {
             0% { transform: translate(0); }
-            50% { transform: translate(-2px, 2px); }
-            100% { transform: translate(2px, -2px); }
+            50% { transform: translate(-2px, 1px); }
+            100% { transform: translate(2px, -1px); }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="k-logo">
-██   ██
-██  ██ 
-█████  
-██  ██ 
-██   ██
-        </div>
-        <div class="kranos-text">KRANOS</div>
-    </div>
-</body>
-</html>
+    <div class="main">
+        <div class="binary-logo">
+1010101010101010101010101010
+1
